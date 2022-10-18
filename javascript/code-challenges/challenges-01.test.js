@@ -14,7 +14,6 @@ const addOne = (arr) => {
   return arr2
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -28,6 +27,7 @@ const addExclamation = (arr) => {
   arr.forEach(element => arr3.push(element + '!'));
   return arr3
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -53,15 +53,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-return word.toUpperCase() + '!'
-};
+  return word.toUpperCase() + '!'
+  };
 
-const speaker = (words, callback) => {
-  let word2 = [];
-  words.forEach(element => {word2.push(callback(element));
-  });
-  return word2;
-};
+  const speaker = (words, callback) => {
+    let word2 = [];
+    words.forEach(element => {word2.push(callback(element));
+    });
+    return word2;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -78,7 +78,6 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
 
 const addValues = (arr, value) => {
   arr.push(value);
@@ -109,12 +108,12 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-const crateList  = (availableItems) => {
+const createList  = (availableItems) => {
   let finalList = [];
 
   availableItems.forEach((item)=>{
-  if(item.available){
-   finalList.push(item.name);
+    if(item.available){
+    finalList.push(item.name);
   }
   });
   return finalList;
