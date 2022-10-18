@@ -6,6 +6,7 @@ CHALLENGE 1 - Review
 
 Write a function named raisedToTheThird that takes in an array of numbers and returns a new array of each of those numbers raised to the 3rd power (hint: look up Math.pow()). Use forEach to solve this problem.
 
+
 ------------------------------------------------------------------------------------------------ describe('Testing challenge 1', () => {
   test('It should return a new array of numbers raised to the thrid power', () => {
     expect(raisedToTheThird([2, 4, 5, -7, 0])).toStrictEqual([8, 64, 125, -343, 0]);
@@ -18,16 +19,19 @@ const raisedToTheThird = (arr) => {
   //let third = arr.map(function(n,i));
   //return {third: arr, third: arr * arr * arr};
   return third;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
+
 
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
   return arr.map(n=>n + 1);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +41,9 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
+
   return arr.map(n=>n + '?');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,6 +54,7 @@ Write a function named forLoopTwoToThe that, given an array of integers as input
 You may choose to complete this challenge using a for loop, for...in syntax, or for...of syntax.
 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
+
 ------------------------------------------------------------------------------------------------     expect(forLoopTwoToThe([0, 4, 5])).toStrictEqual([1, 16, 32]);
     expect(forLoopTwoToThe([0, 4, 5]).length).toStrictEqual(3);
   });
@@ -62,6 +69,7 @@ arr2.push(Math.pow(2,arr[i]));
   };
 return arr2;
   //return arr.map(n=>n * n)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,6 +84,7 @@ const forEachTwoToThe = (arr) => {
     arr2.push(Math.pow(2,num));
   })
 return arr2;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +94,9 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
+
   return arr.map(n=>Math.pow(2,n))
+
 };
 
 /* ------------------------------------------------------------------------------------------------
