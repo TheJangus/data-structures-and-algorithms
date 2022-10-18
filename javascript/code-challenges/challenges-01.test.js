@@ -79,13 +79,17 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
-};
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+const addValues = (arr, value) => {
+  arr.push(value);
+  };
+
+  const addNumbers = (num, arr, times, callback) => {
+  for (let i = 0; i < times; i++){
+  callback(arr, num);
+  }
+  return arr;
+  };
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -105,9 +109,15 @@ The inventory is formatted like this:
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
-const createList = (availableItems) => {
-  // Solution code here...
-};
+const crateList  = (availableItems) => {
+  let finalList = [];
+
+  availableItems.forEach((item)=>{
+  if(item.available){
+   finalList.push(item.name);
+  }
+  });
+  return finalList;
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
