@@ -101,7 +101,11 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  // return arr.sort(function(a,b) => sortByPrice(a) - sortByPrice(b));
+ arr.sort(function(a,b) {
+    return a.price - b.price;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -196,9 +200,16 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
-const sortMeetingsByDay = (arr) => {
-  // Solution code here...
-};
+  const sortMeetingsByDay = (arr) => {
+    let daysOfWeek = {
+    Monday: 0,
+    Tuesday: 1,
+    Wednesday: 2,
+    Thursday: 3,
+    Friday: 4,
+    }
+    return arr.sort((a,b) => daysOfWeek[a.dayOfWeek] - daysOfWeek[b.dayOfWeek]);
+    };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 13 - Stretch Goal
